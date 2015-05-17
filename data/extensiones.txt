@@ -1,4 +1,0 @@
-com_hdflvplayer|<= 2.2|SQL Injection|https://blog.sucuri.net/2014/12/critical-vulnerability-in-joomla-hd-flv-player-plugin.html
-mod_simpleemailform|<= 1.8.5|Reflected XSS| 
-com_facegallery|1.0|SQL Injection & Arbitrary File Download|http://www.homelab.it/wp-content/uploads/2014/09/j00ml4_face_gallery_10_afd.py_.txt
-
