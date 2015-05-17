@@ -11,7 +11,7 @@ use LWP::UserAgent;
 
 push(@INC, '.');
 require 'lib/version.pl';
-#require 'lib/extensiones.pl';
+require 'lib/extensiones.pl';
 
 GetOptions(
 	"url=s" => \$flag_url,
@@ -27,7 +27,7 @@ banner();
 unless ($flag_url) { help(); }
 unless ($flag_useragent) { $flag_useragent = "Scanned by Kum0nga"; }
 if ($flag_version) { version(); }
-
+if ($flag_enum_vul) { enumerate_ex();}
 
 sub banner {
 print q(
@@ -62,6 +62,6 @@ Usage: perl kumonga.pl <URL> <OPTIONS>
 
 OPTIONS:
    --version   => Check Joomla! version
-   --enum-vul  => Enumerate vulnerable extensions installed
+   --enum-vul  => Enumerate extensions and prompt known vulnerabilities
 );
 }
