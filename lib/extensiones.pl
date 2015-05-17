@@ -19,7 +19,7 @@ sub enumerate_ex {
 sub banner_ex {
 print q(
 
-[!] Checking for vulnerable components:
+[!] Printing all knowns vulnerabilities for found components:
 
 );
 }
