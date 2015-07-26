@@ -1,4 +1,4 @@
-# Kum0nga Joomla Scan v0.1
+# Kum0nga Joomla Scan v0.2
 
 # Coded by: X-C3LL
 
@@ -11,7 +11,9 @@ use LWP::UserAgent;
 
 push(@INC, '.');
 require 'lib/version.pl';
-require 'lib/extensiones.pl';
+require 'lib/componentes.pl';
+require 'lib/exploitdb.pl';
+
 
 GetOptions(
 	"url=s" => \$flag_url,
@@ -48,7 +50,7 @@ print q(
       ||                         \\    '
       |/                          \\
                                    ||
-    Kum0nga v0.1                   ||
+    Kum0nga v0.2                   ||
     Joomla! Scanner                \\
                                     '
 [==================================================]
@@ -58,7 +60,7 @@ print q(
 
 sub help {
 print q(
-Usage: perl kumonga.pl <URL> <OPTIONS>
+Usage: perl kumonga.pl --url=<URL> <OPTIONS>
 
 OPTIONS:
    --version   => Check Joomla! version

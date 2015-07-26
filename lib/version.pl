@@ -26,6 +26,15 @@ sub direct {
 	} else {
 		$version = "UNKNOW";
 	}
+        $url = $flag_url."/administrator/manifests/files/joomla.xml";
+        $req = $ua->get($url);
+        $html = $req->decoded_content;
+        if ($html =~ m/\<version\>(.*?)\<\/version\>/g) {
+                $version = $1;
+        } else {
+                $version = "UNKNOW";
+        }
+
 }
 
 sub fingerprint {
