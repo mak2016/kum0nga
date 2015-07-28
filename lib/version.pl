@@ -38,6 +38,12 @@ sub direct {
 }
 
 sub fingerprint {
+$url = $flag_url."/templates/system/css/template.css";
+$req = $ua->get($url);
+$html = $req->decoded_content;
+if ($html =~ m/copyright Copyright \(C\) 2005 \- 2010 Open Source Matters\. All rights reserved/g) {
+$vesion = "1.5.0 - 1.5.26";
+} else { 
 	$url = $flag_url."/media/system/js/mootools-more.js";
 	$req = $ua->get($url);
 	$html = $req->decoded_content;
@@ -106,7 +112,7 @@ sub fingerprint {
 	} else {
 		$version = "UNKNOW";
 	} 
-
+}
 }
 
 
