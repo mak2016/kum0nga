@@ -65,5 +65,6 @@ Usage: perl kumonga.pl --url=<URL> <OPTIONS>
 OPTIONS:
    --version   => Check Joomla! version
    --enum-vul  => Enumerate extensions and prompt known vulnerabilities
+   --user-agent=> Use a custom user agent (recommended)
 );
 }
