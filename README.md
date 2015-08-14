@@ -3,7 +3,7 @@ A simple joomla scan
 
 ## Usage:
 
-perl kum0nga.pl --url=<URL> <OPTIONS>
+perl kum0nga.pl --url=URL [OPTIONS]
 
 Options:
 
